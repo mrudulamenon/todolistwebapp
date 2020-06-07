@@ -66,10 +66,17 @@ h1, p{
 }
 #tbl1{
     background: #8ad1f1;
+    border-collapse: collapse;
+    border: 2px solid rgb(55, 0, 128); 
 }
 th{
     color: aliceblue;
     text-transform: uppercase;
     text-align: center;
 
+}
+th, td{
+    border: 1px solid green;
+    padding: 5px;
+    font-weight: bolder;
 }
