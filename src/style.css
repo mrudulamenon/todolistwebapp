@@ -48,7 +48,7 @@ header{
     min-height: 50px;
     border-bottom: rgb(95, 168, 170) 3px thin;
 }
-h1:hover, p:hover{
+h1, p{
     background: white;
 }
 /* To Do List Page */
