@@ -1,0 +1,75 @@
+body{
+    background-color: aquamarine;
+    background-image: url(../src/todobg.jpg);
+    background-size: cover;
+    text-align: center;
+    /* margin-top: 20px; */
+    height: 100vh;
+    /* width: 100%; */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+/* Login Page */
+form{
+    margin: 10% auto;
+    padding: 10%;
+    border: 1px solid;
+    width: fit-content;
+    font-size: larger;
+    font-weight: bolder;
+    color: rgb(5, 5, 119);
+}
+label{
+    text-align: left;
+    background-color: white;
+}
+/* Login Button */
+#login{
+    width: 150px;
+    background-image: linear-gradient(#778ff7,rgb(239, 218, 245));
+    border-radius: 30px;
+    font-size: larger;
+    font-weight: bolder;
+    color: rgb(5, 5, 83);
+}
+#login:hover{
+    background-image: linear-gradient(#03104e,rgb(198, 17, 248));
+    color: white;
+    transform: translate(ease);
+    transition: ease;
+}
+/* Main/Home page  */
+.logo{
+    width: 100px;
+}
+header{
+    background: rgb(3, 131, 88);
+    background-image: linear-gradient(#8ad1f1,#221d68);
+    color: rgb(253, 253, 253);
+    min-height: 50px;
+    border-bottom: rgb(95, 168, 170) 3px thin;
+}
+h1:hover, p:hover{
+    background: white;
+}
+/* To Do List Page */
+#head{
+    background-image: linear-gradient(#5592b1,#bef8db);
+    color: azure;
+    font-style: italic;
+    text-shadow: 2px 2px 5px #0ff0e4;
+}
+#head:hover{
+    text-shadow: 2px 2px 5px #17009a;
+}
+#listdiv{
+    padding: 10px;
+}
+#tbl1{
+    background: #8ad1f1;
+}
+th{
+    color: aliceblue;
+    text-transform: uppercase;
+    text-align: center;
+
+}
