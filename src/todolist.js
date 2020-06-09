@@ -1,12 +1,16 @@
 $(function () {
     try {
-        let count = 0;
+        let count = [];
         $("#tbl1").on("change", ":checkbox", function () {
             // $(":checkbox").on("click",function chkchange(){
             // var checkbox = document.getElementsByClassName(".chkbox");
             // function chkchange() {            
             // alert("inside");
             var chkstatus=this.checked;
+            let index=count.indexOf(this.id);
+            let arritem=this.id;
+            console.log(arritem,index);
+            console.log(index);
             // // count++;
             // this.checked === true ? chkstatus = false : chkstatus = true;
             // this.checked===true?count++:count--;
@@ -20,22 +24,34 @@ $(function () {
 
             //using Promise
             var promise2 = new Promise(function (resolve, reject) {
+
+                console.log(this.id);
                 if(chkstatus === true)
                 {
-                    count++ ;
+                    if(index==-1){
+                        count.push(arritem);
+                    }
+                   
+                    /*if(count.indexOf(this.id)==-1){
+                        count.push(this.id);
+                    }
+                    //count++ ;*/
                 }
                 else {
-                    count-- ;
+                    if(index!=-1){
+                        count.splice(index,1);
+                    }
+                    //count-- ;
                 }
                 console.log(count,chkstatus);
-                if (count == 5) {
+                if (count.length == 5) {
                     resolve("Congrats! 5 Tasks have been successfully completed!");
                 }
             });
             promise2
                 .then(function (r) {
                     alert(r);
-                    count = 0;
+                    count = [];
                 });
         });
         // }
@@ -60,7 +76,7 @@ $(function () {
                     output += "<td>" + item[i].title + "</td>";
                     // output += "<td>" + item[i].completed + "</td>";
                     // item[i].completed==true?{
-                    output += "<td><input type='checkbox' class='chkbox'" + ((item[i].completed == true) ? 'checked disabled' : '') + " ></td>";
+                    output += "<td><input type='checkbox' id='chkbox"+ item[i].id +"'" + ((item[i].completed == true) ? 'checked disabled' : '') + " ></td>";
                     // output += "<td><input type='checkbox' onchange='chkchange()'  ></td>";
                     // onload='checkthis(this)'
                     // output += "<td><input type='checkbox' " + (item[i].completed=='true')?"checked":""; + "></td>";
