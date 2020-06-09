@@ -20,7 +20,13 @@ $(function () {
 
             //using Promise
             var promise2 = new Promise(function (resolve, reject) {
-                if(chkstatus === true)count++ ;
+                if(chkstatus === true)
+                {
+                    count++ ;
+                }
+                else {
+                    count-- ;
+                }
                 console.log(count,chkstatus);
                 if (count == 5) {
                     resolve("Congrats! 5 Tasks have been successfully completed!");
@@ -54,7 +60,7 @@ $(function () {
                     output += "<td>" + item[i].title + "</td>";
                     // output += "<td>" + item[i].completed + "</td>";
                     // item[i].completed==true?{
-                    output += "<td><input type='checkbox' class='chkbox'" + ((item[i].completed == true) ? 'checked' : '') + " ></td>";
+                    output += "<td><input type='checkbox' class='chkbox'" + ((item[i].completed == true) ? 'checked disabled' : '') + " ></td>";
                     // output += "<td><input type='checkbox' onchange='chkchange()'  ></td>";
                     // onload='checkthis(this)'
                     // output += "<td><input type='checkbox' " + (item[i].completed=='true')?"checked":""; + "></td>";
