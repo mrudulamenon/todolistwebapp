@@ -1,8 +1,6 @@
 $(function () {
-    
 
     try {
-        $("#logoutid").click(function(){location.replace("index.html");});
         let count = [];
         $("#tbl1").on("change", ":checkbox", function () {
             // $(":checkbox").on("click",function chkchange(){
@@ -97,4 +95,6 @@ $(function () {
     catch (e) {
         document.getElementById("listdiv").innerHTML = e;
     }
+    $("#logoutid").click(function(){location.replace("index.html");});
+    
 });
